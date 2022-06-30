@@ -15,10 +15,10 @@ This project has been created for three main reasons:
 
 -   I wanted to play with a few technologies that I've never used before but which sounded interesting in theory:
 
-    * [Svelte](https://svelte.dev/)
-    * [SvelteKit](https://kit.svelte.dev/)
-    * [MDX](https://mdxjs.com/)
-    * [utterances](https://utteranc.es/)
+    -   [Svelte](https://svelte.dev/)
+    -   [SvelteKit](https://kit.svelte.dev/)
+    -   [MDX](https://mdxjs.com/)
+    -   [utterances](https://utteranc.es/)
 
 ## Developing
 
@@ -43,10 +43,9 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-
 ## Imposter Syndrome Disclaimer
 
-I want your help. *No really, I do*.
+I want your help. _No really, I do_.
 
 There might be a little voice inside that tells you you're not ready; that you need to do one more tutorial, or learn another framework, or write a few more blog posts before you can help me with this project.
 

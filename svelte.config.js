@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
+import highlighter from './src/lib/codeHighlighter.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,6 +11,9 @@ const config = {
     preprocess: [
         mdsvex({
             extensions: ['.svx'],
+            highlight: {
+                highlighter
+            },
             layout: {
                 info: 'src/routes/_info.svelte'
             }
