@@ -15,10 +15,10 @@ This project has been created for three main reasons:
 
 -   I wanted to play with a few technologies that I've never used before but which sounded interesting in theory:
 
-            * [Svelte](https://svelte.dev/)
-            * [SvelteKit](https://kit.svelte.dev/)
-            * [MDX](https://mdxjs.com/)
-            * [utterances](https://utteranc.es/)
+    * [Svelte](https://svelte.dev/)
+    * [SvelteKit](https://kit.svelte.dev/)
+    * [MDX](https://mdxjs.com/)
+    * [utterances](https://utteranc.es/)
 
 ## Developing
 
