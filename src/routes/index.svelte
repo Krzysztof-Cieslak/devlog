@@ -1,5 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-    Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-    to read the documentation
-</p>
+<script lang="ts">
+    export let posts;
+</script>
+
+<ul>
+    {#each posts as item}
+        <li><a href={'posts/' + item.slug}>{item.title}</a></li>
+    {/each}
+</ul>

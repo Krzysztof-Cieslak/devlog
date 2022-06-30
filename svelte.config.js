@@ -7,7 +7,15 @@ const config = {
     extensions: ['.svelte', '.svx'],
     // Consult https://github.com/sveltejs/svelte-preprocess
     // for more information about preprocessors
-    preprocess: [mdsvex({ extensions: ['.svx'] }), preprocess()],
+    preprocess: [
+        mdsvex({
+            extensions: ['.svx'],
+            layout: {
+                info: 'src/routes/_info.svelte'
+            }
+        }),
+        preprocess()
+    ],
 
     kit: {
         adapter: adapter()

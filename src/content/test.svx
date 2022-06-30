@@ -5,7 +5,7 @@ color: cadetblue
 list: [1, 2, 3, 4, 'boo']
 ---
 
-<script>let number = 45;</script>
+<script>import Switch from '$lib/Switch.svelte'; let number = 45;</script>
 
 # { title }
 
@@ -22,3 +22,5 @@ Sometimes you need a boinger like this:
   <li>{item}</li>
 {/each}
 </ul>
+
+<Switch />

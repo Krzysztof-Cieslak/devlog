@@ -5,8 +5,8 @@
     <div class="nav-right">
         <a class="active" href="/"> Home </a>
         <a href="/news"> News </a>
-        <a href="/contact"> Contact </a>
         <a href="/about"> About </a>
+        <a href="https://twitter.com/k_cieslak"> Follow me on Twitter </a>
     </div>
 </div>
 
