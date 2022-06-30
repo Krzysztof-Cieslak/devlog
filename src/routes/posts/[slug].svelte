@@ -19,6 +19,7 @@
 
 <script lang="ts">
     import Switch from '$lib/Switch.svelte';
+    import '$lib/styles/codeblock.css';
     export let page, highlightedContent;
     let showRaw = false;
 </script>
@@ -28,7 +29,9 @@
         <Switch bind:checked={showRaw} />
     </div>
     {#if showRaw}
-        {@html highlightedContent}
+        <div style="margin-right: 30px; padding-right: 30px">
+            {@html highlightedContent}
+        </div>
     {/if}
     {#if !showRaw}
         <svelte:component this={page} />

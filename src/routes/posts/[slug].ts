@@ -9,7 +9,7 @@ export async function get({ params }) {
         ? await import(`../../content/${slug}.svx`)
         : await import(`../src/content/${slug}.svx`);
     const rawContent = await fs.readFile(`src/content/${slug}.svx`, 'utf8');
-    const highlighter = await shiki.getHighlighter({ theme: 'github-light' });
+    const highlighter = await shiki.getHighlighter({ theme: 'nord' });
     const highlightedContent = highlighter.codeToHtml(rawContent, { lang: 'mdx' });
     return {
         body: {
