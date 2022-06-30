@@ -10,7 +10,8 @@
         return {
             props: {
                 page,
-                rawContent: data.rawContent
+                rawContent: data.rawContent,
+                highlightedContent: data.highlightedContent
             }
         };
     }
@@ -18,14 +19,18 @@
 
 <script lang="ts">
     import Switch from '$lib/Switch.svelte';
-    export let page, rawContent;
+    export let page, highlightedContent;
     let showRaw = false;
 </script>
 
-<Switch bind:checked={showRaw} />
-{#if showRaw}
-    <pre>{rawContent}</pre>
-{/if}
-{#if !showRaw}
-    <svelte:component this={page} />
-{/if}
+<article style="padding: 30px; margin-top: 0">
+    <div style="float: right;">
+        <Switch bind:checked={showRaw} />
+    </div>
+    {#if showRaw}
+        {@html highlightedContent}
+    {/if}
+    {#if !showRaw}
+        <svelte:component this={page} />
+    {/if}
+</article>

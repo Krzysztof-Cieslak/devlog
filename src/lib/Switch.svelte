@@ -12,7 +12,7 @@
 <style>
     .switch {
         --line: #505162;
-        --dot: #f7f8ff;
+        --dot: #9ea0be;
         --circle: #9ea0be;
         --duration: 0.3s;
         --text: #9ea0be;
