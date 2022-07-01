@@ -3,7 +3,7 @@
     --colour-light: hsl(7 53% 97%); /* fantasy */
 
     --colour-code-line-numbers: hsl(219 14% 71% / 0.8);
-    --colour-code-line-highlight: hsl(34 96% 55%);
+    --colour-code-line-highlight: rgb(250, 30, 228);
     --colour-code-background-hue: 220;
     --colour-code-background-saturation: 13%;
     --colour-code-background-lightness: 18%;
@@ -59,4 +59,8 @@ code .line::before {
     width: calc(var(--max-width-full) + var(--spacing-4));
     border-left: var(--spacing-1) solid var(--colour-code-line-highlight);
     margin-left: calc(-1 * var(--spacing-1));
+}
+
+.dim-line {
+    filter: brightness(0.5);
 }

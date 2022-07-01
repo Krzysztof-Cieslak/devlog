@@ -62,3 +62,8 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 ## Copyright
 
 The library is available under [MIT license](LICENSE.md), which allows modification and redistribution for both commercial and non-commercial purposes.
+
+## Acknowledgements
+
+-   https://github.com/rodneylab/sveltekit-shiki-code-highlighting - using SvelteKit with Shiki
+-   https://codehike.org/ - Build first-class code walkthroughs for the web using MDX and React.

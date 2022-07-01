@@ -49,6 +49,23 @@ function makeFocussable(html) {
     return root.toString();
 }
 
+function addRangeToDataAttribute(html, range) {
+    const root = parse(html);
+
+    root.querySelector('pre').setAttribute('data-range', range.join(','));
+    return root.toString();
+}
+
+function addLineNumberToDataAttribute(html) {
+    let i = 0;
+
+    const replaced = html.replaceAll('<span class="line', (x) => {
+        i++;
+        return `<span data-line="${i}" class="line`;
+    });
+    return replaced;
+}
+
 /**
  * @param code {string} - code to highlight
  * @param lang {string} - code language
@@ -76,7 +93,9 @@ async function highlighter(code, lang, meta) {
                 classes: ['highlight-line']
             }))
         });
+        html = addRangeToDataAttribute(html, highlightLines);
     }
+    html = addLineNumberToDataAttribute(html);
     html = makeFocussable(html);
     return escapeHtml(html);
 }
