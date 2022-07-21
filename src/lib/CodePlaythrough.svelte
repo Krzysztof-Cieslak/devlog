@@ -137,7 +137,6 @@
                                 diffs.push({ type: 'equal', value: diff });
                             }
                         });
-                        //TODO: Calculate diff between previous and current code element
                     }
 
                     let highlight = currentElement.getAttribute('data-range')?.split(',') ?? [];
