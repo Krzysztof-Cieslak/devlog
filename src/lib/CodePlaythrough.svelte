@@ -248,7 +248,7 @@
         animation-name: fadeInOpacity;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
-        animation-duration: 1.5s;
+        animation-duration: 3.5s;
     }
 
     @keyframes fadeInOpacity {
@@ -259,7 +259,7 @@
             margin-left: calc(-1 * var(--spacing-1));
             opacity: 0;
         }
-        50% {
+        25% {
             background-color: var(--colour-code-background-highlighted);
             width: calc(var(--max-width-full) + var(--spacing-4));
             border-left: var(--spacing-1) solid var(--colour-code-line-highlight-new);
