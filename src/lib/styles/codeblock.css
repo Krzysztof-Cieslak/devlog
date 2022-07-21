@@ -4,6 +4,7 @@
 
     --colour-code-line-numbers: hsl(219 14% 71% / 0.8);
     --colour-code-line-highlight: rgb(250, 30, 228);
+    --colour-code-line-highlight-new: rgb(10, 161, 25);
     --colour-code-background-hue: 220;
     --colour-code-background-saturation: 13%;
     --colour-code-background-lightness: 18%;
@@ -34,7 +35,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    --line-height-normal: 1.5;
+    --line-height-normal: 1.7;
 }
 
 code {
@@ -63,4 +64,8 @@ code .line::before {
 
 .dim-line {
     filter: brightness(0.5);
+}
+
+code .line {
+    line-height: var(--line-height-normal);
 }

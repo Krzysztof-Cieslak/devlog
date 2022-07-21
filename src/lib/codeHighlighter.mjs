@@ -1,5 +1,6 @@
 import { parse } from 'node-html-parser';
 import { getHighlighter } from 'shiki';
+import escapeHtml from 'escape-html';
 
 const THEME = 'nord';
 
@@ -8,7 +9,7 @@ const THEME = 'nord';
  * @param {string} html - highlighted HTML
  * @returns {string} - escaped HTML
  */
-function escapeHtml(code) {
+function escHtml(code) {
     return code.replace(
         /[{}`]/g,
         // (character) => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[character]),
@@ -56,14 +57,11 @@ function addRangeToDataAttribute(html, range) {
     return root.toString();
 }
 
-function addLineNumberToDataAttribute(html) {
-    let i = 0;
+function addRawCodeToDataAttribute(html, code) {
+    const root = parse(html);
 
-    const replaced = html.replaceAll('<span class="line', (x) => {
-        i++;
-        return `<span data-line="${i}" class="line`;
-    });
-    return replaced;
+    root.querySelector('pre').setAttribute('data-raw-code', escapeHtml(code));
+    return root.toString();
 }
 
 /**
@@ -95,9 +93,9 @@ async function highlighter(code, lang, meta) {
         });
         html = addRangeToDataAttribute(html, highlightLines);
     }
-    html = addLineNumberToDataAttribute(html);
+    html = addRawCodeToDataAttribute(html, code);
     html = makeFocussable(html);
-    return escapeHtml(html);
+    return escHtml(html);
 }
 
 export default highlighter;
